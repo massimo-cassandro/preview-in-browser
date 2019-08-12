@@ -1,0 +1,65 @@
+{
+	"name": "preview-in-browser",
+	"displayName": "Preview in browser",
+	"description": "Open a file in specified browser using local web server if possibile",
+  "publisher": "mazz",
+  "version": "1.0.0",
+	"repository": "https://github.com/massimo-cassandro/preview-in-browser",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.37.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:mazz.previewInBrowser"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": [
+			{
+				"title": "Preview in browser",
+				"properties": {
+					"preview-in-browser.domain": {
+						"type": "string",
+						"default": "",
+						"description": "Provide a base url for local web server (ex: https://my-site:8888/)."
+					},
+					"preview-in-browser.browser": {
+						"type": "string",
+						"default": "Firefox Developer Edition",
+						"description": "Provide a browser name (if empty default one will be used). Look at readme for a list of valid names"
+					}
+				}
+			}
+		],
+		"commands": [
+			{
+				"command": "mazz.previewInBrowser",
+				"title": "Preview in browser"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "mazz.previewInBrowser",
+					"group": "1_modification"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "mazz.previewInBrowser",
+					"group": "1_modification"
+				}
+			]
+		}
+	},
+	"dependencies": {
+		"opn": "^4.0.2"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.37.0",
+		"eslint": "^5.13.0"
+	}
+}
