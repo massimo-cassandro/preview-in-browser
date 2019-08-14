@@ -3,7 +3,7 @@
 	"displayName": "Preview in browser",
 	"description": "Open a file in specified browser using local web server if possibile",
   "publisher": "mazz",
-  "version": "1.0.0",
+  "version": "1.0.1",
 	"repository": "https://github.com/massimo-cassandro/preview-in-browser",
 	"license": "MIT",
 	"engines": {
