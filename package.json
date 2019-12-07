@@ -5,7 +5,10 @@
   "publisher": "mazz",
   "version": "1.0.1",
 	"repository": "https://github.com/massimo-cassandro/preview-in-browser",
-	"license": "MIT",
+  "license": "MIT",
+  "keywords": [
+    "vscode-extension"
+  ],
 	"engines": {
 		"vscode": "^1.37.0"
 	},
@@ -14,7 +17,7 @@
 	],
 	"activationEvents": [
 		"onCommand:mazz.previewInBrowser"
-	],
+  ],
 	"main": "./extension.js",
 	"contributes": {
 		"configuration": [
