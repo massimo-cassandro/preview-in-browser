@@ -3,7 +3,7 @@
 	"displayName": "Preview in browser",
 	"description": "Open a file in specified browser using local web server if possibile",
   "publisher": "mazz",
-  "version": "1.0.1",
+  "version": "1.1.0",
 	"repository": "https://github.com/massimo-cassandro/preview-in-browser",
   "license": "MIT",
   "keywords": [
@@ -33,6 +33,11 @@
 						"type": "string",
 						"default": "Firefox Developer Edition",
 						"description": "Provide a browser name (if empty default one will be used). Look at readme for a list of valid names"
+          },
+          "preview-in-browser.removeStartString": {
+						"type": "string",
+						"default": "",
+						"description": "Optional string to be removed from the beginning of local path (ex: /public)"
 					}
 				}
 			}

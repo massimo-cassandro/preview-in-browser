@@ -12,4 +12,7 @@ Browser name is platform dependant as reported in [opn readme](https://github.co
 
 > The app name is platform dependent. Don't hard code it in reusable modules. Eg. Chrome is `google chrome` on OS X, `google-chrome` on Linux and `chrome` on Windows.
 
+From 1.1 version a string to be removed from the beginning of local path can be defined in the extension settings.
+
+
 This extension was inspired by [vscode-extensions-open-in-browser](https://github.com/SudoKillMe/vscode-extensions-open-in-browser) and by [vscode-local-web-opener](https://github.com/Tairraos/vscode-local-web-opener)

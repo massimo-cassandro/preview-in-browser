@@ -19,7 +19,8 @@ function activate(context) {
 
     const default_prefs = {
       domain: null,
-      browser:null
+      browser:null,
+      removeStartString:""
     };
 
     preferences = Object.assign(default_prefs, preferences);
@@ -29,11 +30,12 @@ function activate(context) {
 
     const domain = preferences.get('domain'),
       browser = preferences.get('browser'),
+      removeStartString = preferences.get('removeStartString'),
       workspacePath = vscode.workspace.workspaceFolders[0].uri.path;
 
     let fileUrl = e.path;
     if(workspacePath && domain) {
-        fileUrl = fileUrl.replace(workspacePath, domain +'/')
+        fileUrl = fileUrl.replace(workspacePath + removeStartString, domain +'/')
           .replace(/\/+/g, '/');
     }
 
@@ -42,6 +44,7 @@ function activate(context) {
     // console.log('fileUrl: ' + fileUrl );
     // console.log('domain: ' + domain );
     // console.log('browser: ' + browser );
+    // console.log('removeStartString: ' + removeStartString );
     // console.log('workspacePath: ' + workspacePath );
 
 
