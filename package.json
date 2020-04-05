@@ -2,13 +2,13 @@
 	"name": "preview-in-browser",
 	"displayName": "Preview in browser",
 	"description": "Open a file in specified browser using local web server if possibile",
-  "publisher": "mazz",
-  "version": "1.1.0",
+	"publisher": "mazz",
+	"version": "1.1.1",
 	"repository": "https://github.com/massimo-cassandro/preview-in-browser",
-  "license": "MIT",
-  "keywords": [
-    "vscode-extension"
-  ],
+	"license": "MIT",
+	"keywords": [
+		"vscode-extension"
+	],
 	"engines": {
 		"vscode": "^1.37.0"
 	},
@@ -17,7 +17,7 @@
 	],
 	"activationEvents": [
 		"onCommand:mazz.previewInBrowser"
-  ],
+	],
 	"main": "./extension.js",
 	"contributes": {
 		"configuration": [
@@ -33,8 +33,8 @@
 						"type": "string",
 						"default": "Firefox Developer Edition",
 						"description": "Provide a browser name (if empty default one will be used). Look at readme for a list of valid names"
-          },
-          "preview-in-browser.removeStartString": {
+					},
+					"preview-in-browser.removeStartString": {
 						"type": "string",
 						"default": "",
 						"description": "Optional string to be removed from the beginning of local path (ex: /public)"
@@ -67,7 +67,7 @@
 		"opn": "^4.0.2"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.37.0",
+		"@types/vscode": "^1.43.0",
 		"eslint": "^5.13.0"
 	}
 }
