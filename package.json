@@ -10,7 +10,7 @@
 		"vscode-extension"
 	],
 	"engines": {
-		"vscode": "^1.37.0"
+		"vscode": "^1.43.0"
 	},
 	"categories": [
 		"Other"

@@ -1,0 +1,5 @@
+Compilazione estensione:
+
+```
+vsce package
+```
