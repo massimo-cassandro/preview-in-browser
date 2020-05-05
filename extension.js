@@ -17,6 +17,8 @@ function activate(context) {
 	let disposable = vscode.commands.registerCommand('mazz.previewInBrowser', function (e) {
     let preferences = vscode.workspace.getConfiguration('preview-in-browser');
 
+    // console.log(preferences);
+
     const default_prefs = {
       domain: null,
       browser:null,
@@ -25,8 +27,9 @@ function activate(context) {
 
     preferences = Object.assign(default_prefs, preferences);
 
-    //console.log( preferences );
-    //console.log(  vscode.workspace.workspaceFolders[0].uri.path );
+    // console.log( preferences );
+    // console.log(  vscode.workspace.workspaceFolders[0].uri.path );
+    console.log(vscode.workspace.workspaceFolders[0]);
 
     const domain = preferences.get('domain'),
       browser = preferences.get('browser'),
@@ -35,13 +38,13 @@ function activate(context) {
 
     let fileUrl = e.path;
     if(workspacePath && domain) {
-        fileUrl = fileUrl.replace(workspacePath + removeStartString, domain +'/')
-          .replace(/\/+/g, '/');
+      fileUrl = fileUrl.replace(workspacePath + removeStartString, domain +'/')
+        .replace(/\/+/g, '/');
     }
 
 
-    // console.log('e.path: ' + e.path );
-    // console.log('fileUrl: ' + fileUrl );
+    console.log('e.path: ' + e.path );
+    console.log('fileUrl: ' + fileUrl );
     // console.log('domain: ' + domain );
     // console.log('browser: ' + browser );
     // console.log('removeStartString: ' + removeStartString );
