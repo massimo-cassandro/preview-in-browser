@@ -3,7 +3,7 @@
   "displayName": "Preview in browser",
   "description": "Open a file in specified browser using local web server if possibile",
   "publisher": "mazz",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "repository": "https://github.com/massimo-cassandro/preview-in-browser",
   "license": "MIT",
   "keywords": [
@@ -37,7 +37,7 @@
           "preview-in-browser.removeStartString": {
             "type": "string",
             "default": "",
-            "description": "Optional string to be removed from the beginning of local path (ex: /public)"
+            "description": "String to be removed from the beginning of local path (ex: ~/my-project/public)"
           }
         }
       }
