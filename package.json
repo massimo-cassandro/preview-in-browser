@@ -3,7 +3,7 @@
   "displayName": "Preview in browser",
   "description": "Open a file in specified browser using local web server if possibile",
   "publisher": "mazz",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": "https://github.com/massimo-cassandro/preview-in-browser",
   "license": "MIT",
   "keywords": [
@@ -52,13 +52,13 @@
       "editor/context": [
         {
           "command": "mazz.previewInBrowser",
-          "group": "1_modification"
+          "group": "2_workspace"
         }
       ],
       "explorer/context": [
         {
           "command": "mazz.previewInBrowser",
-          "group": "1_modification"
+          "group": "2_workspace"
         }
       ]
     }
