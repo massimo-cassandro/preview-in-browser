@@ -1,7 +1,8 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode'),
-  opener = require('opn');
+  opener = require('opn'),
+  os = require('os');
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -36,17 +37,19 @@ function activate(context) {
       removeStartString = preferences.get('removeStartString'),
       fileUrl = e.path;
 
-    domain += /\/$/.test(domain) ? '' : '/';
-    if(/^\//.test(removeStartString)) {
-      removeStartString = removeStartString.substr(1);
-    }
-
     if(domain) {
-      fileUrl = fileUrl.replace(removeStartString, domain);
+      domain += /\/$/.test(domain) ? '' : '/';
+
+      removeStartString = removeStartString.replace(/^~/, os.homedir());
+      fileUrl = fileUrl.replace(removeStartString, '/')
+        .replace(/^\//, '')
+        .replace(/\/\//g, '/');
+
+      fileUrl = domain + fileUrl;
     }
 
-    console.log('e.path: ' + e.path );
-    console.log('fileUrl: ' + fileUrl );
+    // console.log('e.path: ' + e.path );
+    // console.log('fileUrl: ' + fileUrl );
     // console.log('domain: ' + domain );
     // console.log('browser: ' + browser );
     // console.log('removeStartString: ' + removeStartString );
