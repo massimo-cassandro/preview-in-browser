@@ -3,14 +3,14 @@
   "displayName": "Preview in browser",
   "description": "Open a file in specified browser using local web server if possibile",
   "publisher": "mazz",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "repository": "https://github.com/massimo-cassandro/preview-in-browser",
   "license": "MIT",
   "keywords": [
     "vscode-extension"
   ],
   "engines": {
-    "vscode": "^1.43.0"
+    "vscode": "^1.47.0"
   },
   "categories": [
     "Other"
